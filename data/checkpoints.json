@@ -1,0 +1,77 @@
+[
+	{
+		"id": "drums_small_lokl",
+		"description": "A 2-bar, 9-class onehot drum model with a strong prior (low KL divergence). Better for sampling.",
+		"converter": {
+			"type": "DrumsConverter",
+			"args": {
+				"numSteps": 32,
+				"pitchClasses": null
+			}
+		},
+		"url": "https: //storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/drums_small_lokl"
+	},
+	{
+		"id": "drums_small_hikl",
+		"description": "A 2-bar, 9-class onehot drum model with a weak prior (higher KL divergence). Better for reconstructions and interpolations.",
+		"converter": {
+			"type": "DrumsConverter",
+			"args": {
+				"numSteps": 32,
+				"pitchClasses": null
+			}
+		},
+		"url": "https: //storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/drums_small_hikl"
+	},
+	{
+		"id": "drums_nade_9",
+		"description": "A 2-bar, 9-class multilabel drum model with a NADE decoder.",
+		"converter": {
+			"type": "DrumRollConverter",
+			"args": {
+				"numSteps": 32,
+				"pitchClasses": null
+			}
+		},
+		"url": "https: //storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/drums_nade_9"
+	},
+	{
+		"id": "mel_small",
+		"description": "A 2-bar, 90-class onehot melody model.",
+		"converter": {
+			"type":  "MelodyConverter",
+			"args": {
+				"minPitch": 21,
+				"maxPitch": 109,
+				"numSteps": 32
+			}
+		},
+		"url": "https://storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/mel_small"
+	},
+	{
+	  "id": "mel_small_high",
+		"description": "A 2-bar, 44-class onehot melody model in a higher pitch range.",
+		"converter": {
+			"type":  "MelodyConverter",
+			"args": {
+				"minPitch": 55,
+				"maxPitch": 96,
+				"numSteps": 32
+			}
+		},
+		"url": "https: //storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/mel_small_high"
+	},
+	{
+		"id": "mel_big",
+		"description": "A larger and more accurate 2-bar, 90-class onehot melody model.",
+		"converter": {
+			"type":  "MelodyConverter",
+			"args": {
+				"minPitch": 21,
+				"maxPitch": 109,
+				"numSteps": 32
+			}
+		},
+		"url": "https: //storage.googleapis.com/download.magenta.tensorflow.org/models/music_vae/dljs/mel_big"
+	}
+]
